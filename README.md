@@ -5,10 +5,10 @@ This project demonstrates usage of the Twilio SDK and Next Caller AddOn for Voic
 
 When the configured Twilio number is called, an SMS will be sent to the designated target number with details about the caller.
 
-Installation on Heroku
-----------------------
+Installation
+------------
 
-*Requirements*
+*Requirements:*
 
 * Twilio account (https://www.twilio.com/try-twilio)
   - Allocated phone number (https://www.twilio.com/console/phone-numbers/)
@@ -16,7 +16,8 @@ Installation on Heroku
 
 * Heroku account (https://signup.heroku.com/)
 
-*Clone the GitHub repo and create the Heroku Project*:
+
+*Clone the GitHub Repository and Create the Heroku Project:*
 
     $ git clone git://github.com/nextcaller/nextcaller-twilio-example-python.git
     $ cd nextcaller-twilio-example-python
@@ -24,20 +25,22 @@ Installation on Heroku
     $ heroku create # Note application URL
     $ git push heroku master
 
-*Configure Heroku Variables*
 
-   - `SMS_FROM` - Phone number allocated above
-   - `SMS_TO` - An SMS enabled device or number
-   - `TWILIO_SID` - SID for the Twilio account to use
-   - `TWILIO_TOKEN` - Token for the Twilio account to use
+*Configure Heroku Variables:*
+
+  - `SMS_FROM` - Phone number allocated above
+  - `SMS_TO` - An SMS enabled device or number
+  - `TWILIO_SID` - SID for the Twilio account to use
+  - `TWILIO_TOKEN` - Token for the Twilio account to use
+
 
     $ heroku config:set SMS_FROM='+15055551212' SMS_TO='+14045551212' TWILIO_SID='ABC...' TWILIO_TOKEN='10f...'
-   
+
 
 *Configure Twilio Phone Number*
 
 From the Twilio phone numbers page (https://www.twilio.com/console/phone-numbers/), select the number to configure and enter the application URL (noted above) as the Webhook (POST method).
 
-*Testing*
+*Testing:*
 
 To test the application, call the Twilio phone number. You should receive an SMS on the `SMS_TO` device. The message will include the caller's name, gender, and marital status.
