@@ -28,10 +28,10 @@ Installation
 
 *Configure Heroku Variables:*
 
-  - `SMS_FROM` - Phone number allocated above
-  - `SMS_TO` - An SMS enabled device or number
-  - `TWILIO_SID` - SID for the Twilio account to use
-  - `TWILIO_TOKEN` - Token for the Twilio account to use
+  * SMS_FROM - Phone number allocated above
+  * SMS_TO - An SMS enabled device or number
+  * TWILIO_SID - SID for the Twilio account to use
+  * TWILIO_TOKEN - Token for the Twilio account to use
 
 
     $ heroku config:set SMS_FROM='+15055551212' SMS_TO='+14045551212' TWILIO_SID='ABC...' TWILIO_TOKEN='10f...'
