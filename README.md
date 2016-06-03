@@ -16,7 +16,6 @@ Installation
 
 * Heroku account (https://signup.heroku.com/)
 
-
 *Clone the GitHub Repository and Create the Heroku Project:*
 
     $ git clone git://github.com/nextcaller/nextcaller-twilio-example-python.git
@@ -26,18 +25,19 @@ Installation
     $ git push heroku master
 
 
-*Configure Heroku Variables:*
+*Heroku Variables:*
 
-  * SMS_FROM - Phone number allocated above
-  * SMS_TO - An SMS enabled device or number
-  * TWILIO_SID - SID for the Twilio account to use
-  * TWILIO_TOKEN - Token for the Twilio account to use
+* `SMS_FROM` - Phone number allocated above
+* `SMS_TO` - An SMS enabled device or number
+* `TWILIO_SID` - SID for the Twilio account to use
+* `TWILIO_TOKEN` - Token for the Twilio account to use
 
+*Set Variables:*
 
     $ heroku config:set SMS_FROM='+15055551212' SMS_TO='+14045551212' TWILIO_SID='ABC...' TWILIO_TOKEN='10f...'
 
 
-*Configure Twilio Phone Number*
+*Configure Twilio Phone Number:*
 
 From the Twilio phone numbers page (https://www.twilio.com/console/phone-numbers/), select the number to configure and enter the application URL (noted above) as the Webhook (POST method).
 
